@@ -11,8 +11,12 @@ for item in lines:
 	s = item[:i]
 	list.append(s)
 
-a = str(", ".join(list))
-g.write(a[i:i+19] for i in xrange(0,len(a),19))
+#a = ", ".join(str(list))
+#str(a[i:i+19] for i in xrange(0,len(a),19))
 
+a = [s[i:i+19] for i in xrange(0,len(list),19)]
+b = ", ".join(a)
+print()
 g.close()
+
 #print(list)
