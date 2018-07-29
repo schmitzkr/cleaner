@@ -11,12 +11,10 @@ for item in lines:
 	s = item[:i]
 	list.append(s)
 
-#a = ", ".join(str(list))
-#str(a[i:i+19] for i in xrange(0,len(a),19))
+t = [list[i:i + 20] for i in xrange(0, len(list), 20)]
+	
 
-a = [s[i:i+19] for i in xrange(0,len(list),19)]
-b = ", ".join(a)
-print()
+print('\n'.join(map(str, t)))
+
 g.close()
 
-#print(list)
