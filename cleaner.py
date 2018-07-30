@@ -3,18 +3,22 @@ f = open('dirt.txt','r+')
 lines = f.readlines()
 f.close()
 
-g = open('dirt.txt', 'w')
-list = []
+#g = open('dirt.txt', 'w')
+unames = []
+
 for item in lines:
-	s = str(item)
+	s = item
 	i = s.index(" ")
 	s = item[:i]
-	list.append(s)
-
-t = [list[i:i + 20] for i in xrange(0, len(list), 20)]
+	unames.append(s)
 	
+v = [unames[i:i + 1] for i in xrange(0, len(unames), 1)]
 
-print('\n'.join(map(str, t)))
+#pr i in t:
+for i in v:
+	print [''.join(x) for x in unames]
 
-g.close()
+#print t
 
+#g.write(t)
+#g.close()
